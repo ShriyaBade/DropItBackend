@@ -9,7 +9,7 @@ const bookingSchema = new mongoose.Schema({
     vehicleType: { type: String, enum: ['Bike', 'Car', 'Truck'], required: true },
     estimatedCost: { type: Number, required: true },
     status: { type: String, enum: ['Pending', 'Accepted', 'Completed'], default: 'Pending' },
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     driver: { type: mongoose.Schema.Types.ObjectId, ref: 'Driver' } // New driver reference field
 });
 
