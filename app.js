@@ -11,7 +11,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'https://dropitfrontend.onrender.com/', // Adjust for your frontend URL
+    origin: process.env.FRONTEND_URL || 'https://dropitfrontend.onrender.com', // Adjust for your frontend URL
     credentials: true, // Allows cookies to be sent with requests if needed
 }));
 connectDB();
